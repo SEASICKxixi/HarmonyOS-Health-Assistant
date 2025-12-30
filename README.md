@@ -1,5 +1,3 @@
-# HarmonyOS-Health-Assistant
-HarmonyOS Software Development - HealthAssistant
 # HarmonyOS-Software-Development-Health-Assistant
 
 基于鸿蒙OS的轻量级健康管理应用，实现健康监测、运动指导、饮食管理、习惯养成等核心功能，达成"麻雀虽小，五脏俱全"的开发目标。
