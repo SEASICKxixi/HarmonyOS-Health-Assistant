@@ -1,0 +1,12 @@
+{
+  "app": {
+    "bundleName": "com.example.harmonyapp",
+    "vendor": "example",
+    "versionCode": 1000000,
+    "versionName": "1.0.0",
+    "apiVersion": {
+      "minAPIVersion": 6, // 最低兼容API 6
+      "targetAPIVersion": 12 // 目标编译API 12
+    }
+  }
+}
