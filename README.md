@@ -149,8 +149,8 @@ git clone https://github.com/your-username/harmonyOS-health-assistant.git
 检查日期连续性，自动重置断签记录。
 
 ### 开发团队（风雨无组）
-组长：廖丽辉
-组员：庹中进、罗熹来、雷谨实、王健
+-组长：廖丽辉
+-组员：庹中进、罗熹来、雷谨实、王健
 
 ### 提交规范
 1. Fork本仓库
@@ -171,3 +171,4 @@ git clone https://github.com/your-username/harmonyOS-health-assistant.git
 ##  致谢
 
 感谢西北工业大学软件学院提供课程指导，感谢所有项目组成员的辛勤付出，以及鸿蒙开发者社区的技术支持。
+
