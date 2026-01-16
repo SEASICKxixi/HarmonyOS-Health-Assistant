@@ -1,92 +1,173 @@
-# eD4ENLDLnBOpw
+# HarmonyOS Health Assistant
 
+一个基于鸿蒙操作系统开发的个人健康管理应用，集成了健康监测、运动指导、饮食管理、习惯养成和系统管理等核心功能，为用户提供全方位的健康管理解决方案。
 
+##  项目概述
 
-## Getting started
+本项目是《鸿蒙健康小助手》应用的完整实现，旨在开发一款"麻雀虽小，五脏俱全"的健康管理工具。应用通过手机传感器、模拟数据和用户输入，为用户提供健康数据记录、运动指导、饮食分析、习惯养成等一体化服务。
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### 核心特点
+- **全栈鸿蒙开发**：基于HarmonyOS原生开发，充分利用鸿蒙系统特性
+- **五大功能模块**：涵盖健康管理的各个维度
+- **本地数据存储**：用户数据本地加密存储，保护隐私安全
+- **智能健康评分**：基于多维度数据的健康指数计算
+- **2.5万行代码**：完整的项目实践，涵盖前端、后端、算法（主要使用ArkTS语言进行主体开发）
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+##  功能模块
 
-## Add your files
+### 1. 健康监测模块
+- **步数统计**：实时显示步数，支持近7天曲线展示
+- **心率监测**：手动/自动心率测量，历史数据记录
+- **活动记录**：用户自定义活动类型与时长
+- **健康报告**：每日自动生成健康评分与建议
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### 2. 运动指导模块
+- **动作库**：50个标准动作
+- **训练计划**：3类预设计划（居家锻炼、碎片化运动、入门减脂）
+- **动作识别**：调用基础算法进行动作标准度评估
+- **训练记录**：自动记录训练时长与消耗
 
+### 3. 饮食管理模块
+- **饮食记录**：支持三餐及加餐记录
+- **热量计算**：基于30种常见食物数据库自动计算
+- **营养分析**：蛋白质、脂肪、碳水比例分析
+- **饮食建议**：根据营养摄入给出个性化建议
+
+### 4. 习惯养成模块
+- **习惯打卡**：支持喝水、运动、早睡等习惯跟踪
+- **成就系统**：连续打卡解锁成就徽章
+- **好友排行**：模拟好友数据，激励坚持打卡
+- **数据统计**：详细的数据报表与趋势分析
+
+### 5. 系统管理模块
+- **用户认证**：手机号验证码登录/注册
+- **个人资料**：BMI自动计算与健康分类
+- **数据备份**：本地数据导出/导入功能
+- **主题切换**：支持浅色/深色模式
+
+##  技术架构
+
+### 开发环境
+- **操作系统**：Windows 10/11
+- **开发工具**：DevEco Studio 6.0.1.260
+- **目标系统**：HarmonyOS 6.0+
+- **编程语言**：ArkTS
+
+### 技术栈
+- **前端框架**：HarmonyOS UI框架
+- **数据存储**：Preferences、RelationalStore
+- **系统API**：传感器API、AI能力API、通知API
+- **版本控制**：Git
+
+### 项目结构
 ```
-cd existing_repo
-git remote add origin https://gitlab.omniedu.com/root/eD4ENLDLnBOpw.git
-git branch -M main
-git push -uf origin main
+harmonyOS-health-assistant/
+├── entry/                    # 应用主模块
+│   ├── src/main/
+│   │   ├── java/           # Java代码
+│   │   ├── js/             # JS代码
+│   │   ├── resources/      # 资源文件
+│   │   └── config.json     # 应用配置文件
+├── health-monitor/          # 健康监测模块
+├── exercise-guide/          # 运动指导模块
+├── diet-management/         # 饮食管理模块
+├── habit-forming/           # 习惯养成模块
+├── system-management/       # 系统管理模块
+├── common/                  # 公共工具类
+├── docs/                    # 项目文档
+│   ├── 项目计划/
+│   ├── 需求规格说明书/
+│   ├── 详细设计说明书/
+│   └── 用户操作手册/
+└── README.md               # 项目说明
 ```
 
-## Integrate with your tools
+##  快速开始
 
-- [ ] [Set up project integrations](https://gitlab.omniedu.com/root/eD4ENLDLnBOpw/-/settings/integrations)
+### 环境准备
+1. **安装DevEco Studio 6.0.1.260**
+2. **配置HarmonyOS SDK**
+3. **准备鸿蒙开发设备或模拟器**
 
-## Collaborate with your team
+### 编译运行
+```bash
+# 克隆项目
+git clone https://github.com/your-username/harmonyOS-health-assistant.git
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+# 使用DevEco Studio打开项目
+# 选择目标设备（模拟器或真机）
+# 点击运行按钮
+```
 
-## Test and Deploy
+### 应用配置
+1. **首次运行需要授予必要权限**：
+   - 身体活动权限（步数统计）
+   - 相机权限（动作识别）
+   - 通知权限（健康提醒）
 
-Use the built-in continuous integration in GitLab.
+2. **注册用户账号**：
+   - 使用手机号接收验证码
+   - 设置登录密码
+   - 完善个人基本信息
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+##  详细文档
 
-***
+### 开发文档
+- [项目计划书](docs/项目计划/ETC_01_项目计划4.0.0.doc) - 项目整体规划与进度安排
+- [需求规格说明书](docs/需求规格说明书/ETC_02_需求规格说明书2.0.doc) - 功能需求详细描述
+- [详细设计说明书](docs/详细设计说明书/ETC_03_详细设计说明书3.0.0.doc) - 技术实现方案与类设计
+- [用户操作手册](docs/用户操作手册/用户操作手册.doc) - 用户使用指南
 
-# Editing this README
+##  测试说明
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### 测试环境
+- **测试设备**：鸿蒙OS 6.0+ 手机或模拟器
+- **测试工具**：DevEco Studio测试框架
+- **测试数据**：包含模拟步数、心率、饮食等数据
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### 测试范围
+1. **功能测试**：验证五大模块所有功能点
+2. **性能测试**：应用启动时间、页面响应时间
+3. **兼容性测试**：不同鸿蒙OS版本适配
+4. **稳定性测试**：长时间运行测试
 
-## Name
-Choose a self-explaining name for your project.
+##  核心算法
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### 健康评分算法
+基于四个维度计算综合健康指数：
+```
+健康评分 = (运动达标率 × 30% + 饮食均衡率 × 30% + 
+          作息规律率 × 20% + 习惯完成率 × 20%) × 100
+```
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### 热量计算算法
+```
+总热量 = Σ(食物热量 × 摄入量)
+```
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### 连续打卡算法
+检查日期连续性，自动重置断签记录。
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### 开发团队（风雨无组）
+组长：廖丽辉
+组员：庹中进、罗熹来、雷谨实、王健
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### 提交规范
+1. Fork本仓库
+2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启Pull Request
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+### 代码规范
+- 遵循鸿蒙开发规范
+- 添加必要的注释
+- 确保代码通过基础测试
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+##  许可证
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+本项目基于 **MIT License** 开源，详情请查看 [LICENSE](LICENSE) 文件。
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+##  致谢
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+感谢西北工业大学软件学院提供课程指导，感谢所有项目组成员的辛勤付出，以及鸿蒙开发者社区的技术支持。
